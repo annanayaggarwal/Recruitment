@@ -90,7 +90,7 @@ router.post('/submit', (req, res) => {
     })
     .catch(error => {
       console.error(error);
-      res.status(500).json({ error: 'Error saving test result' });
+      res.status(500).json({ error: 'Error saving test result',details: error.message });
     });
 });
 
