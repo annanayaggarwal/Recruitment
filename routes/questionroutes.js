@@ -102,6 +102,9 @@ router.get('/questions', (req, res) => {
       type: question.type,
       question: question.question,
       options: question.options,
+      selectedOption:question.selectedOption, 
+      visited: question.visited, 
+      answered:question.answered
     };
   });
 
