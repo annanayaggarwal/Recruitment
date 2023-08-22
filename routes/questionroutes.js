@@ -86,7 +86,11 @@ router.post('/submit', (req, res) => {
 
   testResult.save()
     .then(() => {
-      res.json({ score: score });
+      res.json({ 
+        name: username,
+        answers: userAnswers,
+        score: score 
+      });
     })
     .catch(error => {
       console.error(error);

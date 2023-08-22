@@ -13,7 +13,10 @@ app.use(bodyParser.json());
 app.use(cors());
 
 mongoose
-  .connect(process.env.dburl)
+  .connect(process.env.dburl,{
+    useNewUrlParser: true,
+      useUnifiedTopology: true
+  })
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.log(err));
 
